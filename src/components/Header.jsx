@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../Theme";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Icon } from "@iconify/react";
-import logo3 from "../assets/pages-img/logo3.svg";
+import logo from "../assets/pages-img/logo.svg";
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -12,7 +12,7 @@ const Header = () => {
         <Col>
           {/*logo image */}
           <Image
-            src={logo3}
+            src={logo}
             alt="Logo"
             className="pt-3 ps-sm-2 ps-md-2 ps-lg-5"
           />
