@@ -25,17 +25,16 @@ const Home = () => {
             <h1 className="display-6">
               I'm Catalina-Alexandra Jora or just Alex.
             </h1>
-            <h1 className="display-6">I'm a full stack developer.</h1>
+            <h1 className="display-6">I'm a junior full stack developer.</h1>
           </WelcomeContainer>
           <WelcomeTextContainer className="pt-5 custom-fs">
+            <p>I have 1.5 years’ experience.</p>
             <p>
-              Lorem ipsum dolor sit amet. Aut voluptatem voluptatem ut
-              laudantium.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet. Aut voluptatem voluptatem ut
-              laudantiu.
-              <br></br>ipsum dolor sit amet. Aut voluptatem.
+              I value <span className="fw-semibold">empathy</span>, and
+              <span className="fw-semibold"> integrity</span> above all else.
+              <br></br>
+              These ideals guide my approach to problem solving and life in
+              general.
             </p>
           </WelcomeTextContainer>
         </Col>

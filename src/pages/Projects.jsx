@@ -53,7 +53,6 @@ const ProjectDescription = styled.p`
 
 const ProjectSubtitle = styled.h6`
   font-size: 1.1rem;
-  color: var(--button-orange);
 `;
 const TextSection = styled.div`
   font-size: 1.6rem;
@@ -62,7 +61,10 @@ const TextSection = styled.div`
     margin-top: 1.5rem;
   }
 `;
-
+const ProjectImage = styled.img`
+  border: 2px solid white;
+  width: 100%;
+`;
 const Projects = () => {
   const projectsPerPage = 1; // Number of projects to display per page
   const [currentPage, setCurrentPage] = useState(1);
@@ -89,7 +91,7 @@ const Projects = () => {
               {/* Image on the left */}
               <Col lg={5} xs={12} className="mb-3 mx-auto">
                 <div className="image-container">
-                  <Image
+                  <ProjectImage
                     src={project.imageUrl}
                     alt={project.title}
                     className="rounded h-100"
@@ -100,9 +102,7 @@ const Projects = () => {
 
               {/* Text on the right */}
               <Col lg={7} xs={12} className="text-container mx-auto ps-lg-4">
-                <TextSection className=" fw-bolder pb-1">
-                  {project.title}
-                </TextSection>
+                <TextSection className="  pb-1">{project.title}</TextSection>
                 <ProjectSubtitle className="fw-bold pb-3">
                   {project.subtitle}
                 </ProjectSubtitle>

@@ -1,7 +1,7 @@
 :root {
   --circle-w: 50px;
   /* --circle-bg: rgb(67, 223, 213); */
-  --circle-bg: #d7d6d6;
+  --circle-bg: rgba(240, 249, 249, 1);
   --arrow-bg: #000;
 
   --bezier: cubic-bezier(0.77, 0, 0.175, 1);

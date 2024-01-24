@@ -19,8 +19,21 @@ export const aboutImage = {
   imageUrl: photo,
 };
 export const aboutMeTitle = "Some info ABOUT me";
-export const aboutMeText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.";
+// export const aboutMeText = "I’m a dedicated software engineer based in Cape Town, South Africa.
+//  I love creating beautiful and user-friendly products. I'm also a data enthusiast, always eager to learn new things.
+//  I've successfully completed an intensive 12-month course at CodeYourFuture, which has provided me with a solid foundation in Full Stack Development.
+//   With a background in catering and nursing, I bring a unique perspective and creative problem-solving to the table. Join me on this journey, and let's build something amazing together!";
+
+export const aboutMeText = `
+  I’m a curious software engineer based in Cape Town, South Africa.
+  I love creating beautiful and user-friendly products. I'm also a data enthusiast, always eager to learn new things.
+
+  I've completed an intensive 9-month course at CodeYourFuture, which has provided me with a solid foundation in Full Stack Development.
+
+   With a background in catering and nursing, I bring a unique perspective and creative problem-solving to the table.
+    Join me on this journey, and let's build something amazing together!
+`;
+
 /* SKILLS
  **************************************************************
  */
