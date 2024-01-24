@@ -1,17 +1,10 @@
 import styled, { css } from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import PropTypes from "prop-types";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
-
-// const baseStyles = css`
-//   color: #000000;
-//   &&.active {
-//     font-weight: 900;
-//     border-bottom: 2px solid #000000;
-//   }
-// `;
 
 const baseStyles = css`
   color: #000000;
@@ -35,11 +28,6 @@ const StyledCustomMobileNavLinks = styled(StyledNavLinks)`
     padding-right: 0.5rem !important;
   }
 `;
-// const StyledIcon = styled(FontAwesomeIcon)`
-//   font-size: 2x;
-//   margin: 0 3px;
-//   color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-// `;
 
 const NavBar = ({ fixed }) => {
   const navLinks = [
@@ -125,6 +113,9 @@ const NavBar = ({ fixed }) => {
       </Row>
     </Container>
   );
+};
+NavBar.propTypes = {
+  fixed: PropTypes.bool,
 };
 
 export default NavBar;

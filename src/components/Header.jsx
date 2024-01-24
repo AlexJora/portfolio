@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ThemeContext } from "../Theme";
-import styled from "styled-components";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import logo3 from "../assets/pages-img/logo3.svg";
