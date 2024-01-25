@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
@@ -5,10 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
+import { ThemeContext } from "../Theme";
 
 const baseStyles = css`
   color: #000000;
-  font-weight: normal; // Reset the font weight to normal
+  font-weight: normal;
   &:hover {
     font-weight: 900;
   }
@@ -28,8 +30,15 @@ const StyledCustomMobileNavLinks = styled(StyledNavLinks)`
     padding-right: 0.5rem !important;
   }
 `;
-
+const StyledIconLink = styled.a`
+  color: ${(props) => (props.theme === "dark-theme" ? "white" : "black")};
+  &:hover {
+    color: ${(props) =>
+      props.theme === "dark-theme" ? "lightgray" : "darkgray"};
+  }
+`;
 const NavBar = ({ fixed }) => {
+  const { theme } = useContext(ThemeContext);
   const navLinks = [
     { id: "home", label: "HOME" },
     { id: "about", label: "ABOUT" },
@@ -66,23 +75,26 @@ const NavBar = ({ fixed }) => {
               ))}
             </Nav>
             <div className="d-flex justify-content-center align-items-center mt-5 pt-5">
-              <a href="mailto:jora.catalinaa@gmail.com" className="text-dark">
+              <StyledIconLink
+                href="mailto:jora.catalinaa@gmail.com"
+                theme={theme}
+              >
                 <FontAwesomeIcon
                   icon={faSquareEnvelope}
                   size="2x"
                   className="mx-3"
                 />
-              </a>
-              <a href="https://github.com/AlexJora" className="text-dark">
+              </StyledIconLink>
+              <StyledIconLink href="https://github.com/AlexJora" theme={theme}>
                 <FontAwesomeIcon
                   icon={faSquareGithub}
                   size="2x"
                   className="mx-3"
                 />
-              </a>
-              <a href="www.linkedin.com/in/alexjora" className="text-dark">
+              </StyledIconLink>
+              <StyledIconLink href="www.linkedin.com/in/alexjora" theme={theme}>
                 <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-3" />
-              </a>
+              </StyledIconLink>
             </div>
           </Navbar>
         </Col>

@@ -35,8 +35,8 @@ function App() {
             <Contact />
           </Col>
         </Row>
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 }

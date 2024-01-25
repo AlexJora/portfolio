@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const CodeButton = styled(Button)`
   &&&.btn {
-    color: #fff;
+    color: #000;
     background-color: var(--button-orange);
     border-color: var(--button-green);
 
@@ -22,7 +22,7 @@ const CodeButton = styled(Button)`
 
 const DemoButton = styled(Button)`
   &.btn {
-  color: #fff;
+  color: #000;
   background-color: var(--button-green);
   border-color: var(--button-orange);
   padding: 10px 15px;
@@ -34,7 +34,7 @@ const DemoButton = styled(Button)`
 `;
 const PrevNextButton = styled(Button)`
   &.btn {
-  color: #fff;
+  color: #000;
   background-color: var(--button-green);
   border-color: var(--button-orange);
   padding: 10px 15px;
@@ -121,6 +121,7 @@ const Projects = () => {
                     href={project.codeUrl}
                     target="_blank"
                     className="me-3 btn"
+                    size="lg"
                   >
                     View Code
                   </CodeButton>
@@ -128,6 +129,7 @@ const Projects = () => {
                     href={project.viewUrl}
                     target="_blank"
                     className="btn"
+                    size="lg"
                   >
                     View Demo
                   </DemoButton>

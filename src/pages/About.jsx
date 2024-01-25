@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const ResumeButton = styled(Button)`
   &.btn {
-    color: #fff;
+    color: #000;
     background-color: var(--button-orange);
     border-color: var(--button-green);
 
@@ -26,13 +26,6 @@ const AboutText = styled.p`
     font-size: 0.9rem;
   }
 `;
-// const AboutImage = styled.img`
-//   width: 50% !important;
-
-//   @media (max-width: 768px) {
-//     width: 30% !important;
-//   }
-// `;
 
 const LargeImageWrapper = styled.div`
   width: 60%;

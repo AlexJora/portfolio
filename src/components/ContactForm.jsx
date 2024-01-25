@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 
 const SubmitButton = styled(Button)`
   &&&.btn {
-    color: #fff;
+    color: #000;
     background-color: var(--button-orange);
     border-color: var(--button-green);
 

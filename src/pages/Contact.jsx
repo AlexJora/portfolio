@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -5,12 +6,29 @@ import { Container, Row, Col } from "react-bootstrap";
 import ContactForm from "../components/ContactForm";
 import styled from "styled-components";
 import { animateScroll as scroll } from "react-scroll";
+import { ThemeContext } from "../Theme";
 
 export const ThankYouText = styled.h2`
   font-family: "Dancing Script", cursive;
 `;
+const StyledLink = styled.a`
+  color: ${(props) => (props.theme === "dark-theme" ? "white" : "black")};
+  &:hover {
+    color: ${(props) =>
+      props.theme === "dark-theme" ? "lightgray" : "darkgray"};
+  }
+`;
 
+// const StyledLink = styled.a`
+//   color: ${(props) => (props.theme === "dark-theme" ? "white" : "black")};
+//   &:hover {
+//     color: ${(props) =>
+//       props.theme === "dark-theme" ? "lightgray" : "darkgray"};
+//   }
+// `;
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
+
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -29,13 +47,14 @@ const Contact = () => {
               Thank You for visiting!
             </ThankYouText>
             <p className="pb-5 mb-5">Phone number: +27 66 552 8814</p>
-            <a
+            <StyledLink
               href="#"
               onClick={scrollToTop}
-              className="mt-5 text-decoration-none fs-5 fw-bold text-dark"
+              className="mt-5 text-decoration-none fs-5 fw-bold"
+              theme={theme}
             >
               Back to Top
-            </a>
+            </StyledLink>
           </div>
         </Col>
         <Col lg={7} className="ps-5">
@@ -64,19 +83,30 @@ const Contact = () => {
         </Col>
         <Col md={12} className="d-flex justify-content-center pb-4">
           {/* Icons */}
-          <FontAwesomeIcon icon={faSquareEnvelope} size="3x" className="mx-4" />
-          <FontAwesomeIcon icon={faSquareGithub} size="3x" className="mx-4" />
-          <FontAwesomeIcon icon={faLinkedin} size="3x" className="mx-4" />
+          <StyledLink href="mailto:jora.catalinaa@gmail.com" theme={theme}>
+            <FontAwesomeIcon
+              icon={faSquareEnvelope}
+              size="3x"
+              className="mx-4"
+            />
+          </StyledLink>
+          <StyledLink href="https://github.com/AlexJora" theme={theme}>
+            <FontAwesomeIcon icon={faSquareGithub} size="3x" className="mx-4" />
+          </StyledLink>
+          <StyledLink href="www.linkedin.com/in/alexjora" theme={theme}>
+            <FontAwesomeIcon icon={faLinkedin} size="3x" className="mx-4" />
+          </StyledLink>
         </Col>
         <Col md={12}>
           <p>Phone number: +27 66 552 8814</p>
-          <a
+          <StyledLink
             href="#"
             onClick={scrollToTop}
-            className="mt-5 text-decoration-none fs-5 fw-bold text-dark"
+            className="mt-5 text-decoration-none fs-5 fw-bold"
+            theme={theme}
           >
             Back to Top
-          </a>
+          </StyledLink>
         </Col>
       </Row>
     </Container>
