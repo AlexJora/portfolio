@@ -78,6 +78,7 @@ export const projectsData = [
         width="30"
         height="30"
       />,
+      <Icon key="netlify-icon" icon="devicon:netlify" width="30" height="30" />,
     ],
     imageUrl: portfolio,
     codeUrl: "https://github.com/example/project1",
@@ -104,7 +105,18 @@ export const projectsData = [
         width="30"
         height="30"
       />,
-      <Icon key="express-icon" icon="devicon:express" width="30" height="30" />,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
+      <Icon
+        key="express-icon"
+        icon="skill-icons:expressjs-light"
+        width="30"
+        height="30"
+      />,
       <Icon
         key="mongodb-icon"
         icon="simple-icons:mongodb"
@@ -143,6 +155,12 @@ export const projectsData = [
         width="30"
         height="30"
       />,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
       <Icon key="netlify-icon" icon="devicon:netlify" width="30" height="30" />,
     ],
     imageUrl: lawyer,
@@ -169,7 +187,18 @@ export const projectsData = [
         width="30"
         height="30"
       />,
-      <Icon key="express-icon" icon="devicon:express" width="30" height="30" />,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
+      <Icon
+        key="express-icon"
+        icon="skill-icons:expressjs-light"
+        width="30"
+        height="30"
+      />,
       <Icon
         key="postgresql-icon"
         icon="logos:postgresql"
@@ -224,7 +253,14 @@ export const projectsData = [
         width="30"
         height="30"
       />,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
       <Icon key="api-icon" icon="carbon:api-1" width="30" height="30" />,
+      <Icon key="netlify-icon" icon="devicon:netlify" width="30" height="30" />,
     ],
     imageUrl: tv,
     codeUrl: "https://github.com/AlexJora/tv-show-dom-project",
