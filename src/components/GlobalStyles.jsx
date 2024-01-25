@@ -3,9 +3,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --text-primary-light: #000000;
+    --text-primary-light: #000;
     --text-primary-dark: rgb(243, 239, 239);
-    --bg-primary-dark: #000000;
+    --bg-primary-dark: #000;
     --bg-primary-light: linear-gradient(     
 132deg, 
 rgba(37,85,83,1) 4%,
@@ -67,9 +67,16 @@ rgba(37,85,83,1) 99%);
 
       .dark-theme .navbar-nav .nav-link.active,
       .dark-theme .navbar-nav .nav-link.show {
-        border-bottom: 2px solid #ffffff; 
+        border-bottom: 2px solid #fff; 
         
         
+      }
+      .light-theme .hr-wrapper {
+        color:  #000; 
+      }
+    
+      .dark-theme .hr-wrapper {
+        color:  #fff; 
       }
       
 `;

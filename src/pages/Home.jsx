@@ -43,8 +43,8 @@ const Home = () => {
         <ScrollAnimation />
       </Row>
       <Row className="pt-lg-5 pt-md-5 pt-sm-1">
-        <div className="col-12 col-md-12 col-lg-10">
-          <hr className="border-dark border-2 opacity-100" />
+        <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
+          <hr className=" border-2 opacity-100" />
         </div>
       </Row>
     </Container>

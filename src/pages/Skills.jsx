@@ -120,8 +120,8 @@ const Skills = () => {
 
       {/* horizontal line */}
       <Row className="pt-2">
-        <div className="col-12 col-md-12 col-lg-10">
-          <hr className="border-dark border-2 opacity-100" />
+        <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
+          <hr className="border-2 opacity-100" />
         </div>
       </Row>
     </Container>
