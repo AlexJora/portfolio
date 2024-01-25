@@ -9,14 +9,14 @@ import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import { ThemeContext } from "../Theme";
 
 const baseStyles = css`
-  color: #000000;
+  color: #000;
   font-weight: normal;
   &:hover {
     font-weight: 900;
   }
   &.active {
     font-weight: 900;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #000;
   }
 `;
 const StyledNavLinks = styled(Link)`

@@ -1,8 +1,38 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../Theme";
 import { useForm } from "react-hook-form";
 import { Form, Button, Col, Row } from "react-bootstrap";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import emailjs from "@emailjs/browser";
+
+const lightThemeStyles = css`
+  color: black;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+`;
+
+const darkThemeStyles = css`
+  color: white;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+`;
+
+const CustomInput = styled.input`
+  ${(props) =>
+    props.theme === "light-theme" ? lightThemeStyles : darkThemeStyles}
+  border-radius: 5px;
+  width: 60%;
+  margin-bottom: 10px;
+
+  &::placeholder {
+    color: ${(props) => (props.theme === "light-theme" ? "black" : "white")};
+`;
 
 const SubmitButton = styled(Button)`
   &&&.btn {
@@ -18,17 +48,9 @@ const SubmitButton = styled(Button)`
     }
   }
 `;
-const CustomInput = styled.input`
-  background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: 3px solid gray;
-  border-bottom: 3px solid gray;
-  border-radius: 5px;
-  width: 60%;
-`;
 
 const ContactForm = () => {
+  const { theme } = useContext(ThemeContext);
   const {
     register,
     handleSubmit,
@@ -89,7 +111,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form onSubmit={handleSubmit(onSubmit)} theme={theme}>
       <Form.Group controlId="formName" className="mb-3">
         <CustomInput
           type="text"
@@ -102,6 +124,7 @@ const ContactForm = () => {
               message: "Please use 30 characters or less",
             },
           })}
+          theme={theme}
         />
         {errors.name && (
           <div className="invalid-feedback">{errors.name.message}</div>
@@ -120,6 +143,7 @@ const ContactForm = () => {
                 pattern:
                   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
               })}
+              theme={theme}
             />
             {errors.email && (
               <div className="invalid-feedback">{errors.email.message}</div>
@@ -131,10 +155,11 @@ const ContactForm = () => {
       <Form.Group controlId="formMessage" className="mb-3">
         <CustomInput
           as="textarea"
-          rows={2}
-          placeholder="Message"
+          rows={3}
+          placeholder="Your message"
           className={`p-2 ${errors.message ? "is-invalid" : ""}`}
           {...register("message", { required: "Please enter your message" })}
+          theme={theme}
         />
         {errors.message && (
           <div className="invalid-feedback">{errors.message.message}</div>
