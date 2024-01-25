@@ -57,7 +57,7 @@ const ProjectSubtitle = styled.h6`
 const TextSection = styled.div`
   font-size: 1.6rem;
   margin-top: -10px;
-  @media (max-width: 568px) {
+  @media (max-width: 992px) {
     margin-top: 1.5rem;
   }
 `;
@@ -89,7 +89,7 @@ const Projects = () => {
           <div key={index}>
             <Row className="project-container pt-5">
               {/* Image on the left */}
-              <Col lg={5} xs={12} className="mb-3 mx-auto">
+              <Col lg={5} md={8} sm={12} className="mb-3 mx-auto">
                 <div className="image-container">
                   <ProjectImage
                     src={project.imageUrl}
@@ -101,7 +101,12 @@ const Projects = () => {
               </Col>
 
               {/* Text on the right */}
-              <Col lg={7} xs={12} className="text-container mx-auto ps-lg-4">
+              <Col
+                lg={7}
+                md={8}
+                sm={12}
+                className="text-container mx-auto ps-lg-4"
+              >
                 <TextSection className="  pb-1">{project.title}</TextSection>
                 <ProjectSubtitle className="fw-bold pb-3">
                   {project.subtitle}
