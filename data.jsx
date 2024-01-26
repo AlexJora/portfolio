@@ -57,7 +57,7 @@ export const projectsData = [
     title: "PORTFOLIO",
     subtitle: "1. React",
     description:
-      "My portfolio website, crafted using the powerful combination of React for dynamic functionality, Bootstrap for responsive design, and Styled Components for elegant styling. Feel free to explore and get in touch!",
+      "My portfolio website, crafted using the powerful combination of React for dynamic functionality, Bootstrap for responsive design, and Styled Components for styling. Feel free to explore and get in touch!",
     renderNote: false,
     tools: [
       <Icon key="react-icon" icon="logos:react" width="30" height="30" />,
@@ -242,7 +242,7 @@ export const projectsData = [
     title: "TV SHOW",
     subtitle: "5. JavaScript",
     description:
-      "The TV Show project is a web application developed using HTML, CSS, Vanilla JavaScript, seamlessly integrating with the TVmaze API. Users can explore and choose from a diverse range of TV series and episodes, enhanced by a live search feature.This project allowed me to gain experience in manipulating the DOM, fetching data from external APIs, and designing a user-friendly interface for an enhanced viewing experience.",
+      "The TV Show project is a web application developed using HTML, CSS, Vanilla JavaScript, seamlessly integrating with the TVmaze API. Users can explore and choose from a diverse range of TV series and episodes, enhanced by a live search feature. This project allowed me to gain experience in manipulating the DOM and fetching data from external APIs.",
     renderNote: false,
 
     tools: [
