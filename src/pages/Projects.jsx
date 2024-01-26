@@ -78,10 +78,6 @@ const Projects = () => {
 
   const totalPages = Math.ceil(projectsData.length / projectsPerPage);
 
-  // const handlePageChange = (newPage) => {
-  //   setCurrentPage(newPage);
-  // };
-
   const handlePageChange = (newPage) => {
     setIsLoading(true);
 
@@ -188,7 +184,7 @@ const Projects = () => {
             </Col>
           </Col>
         </Row>
-        <Row className="pt-5">
+        <Row className="pt-5 mt-lg-4">
           <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
             <hr className="border-2 opacity-100" />
           </div>
