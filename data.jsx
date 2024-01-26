@@ -57,7 +57,8 @@ export const projectsData = [
     title: "PORTFOLIO",
     subtitle: "1. React",
     description:
-      "This my portfolio website, crafted using the powerful combination of React for dynamic functionality, Bootstrap React for responsive design, and Styled Components for elegant styling. Feel free to explore and get in touch!",
+      "My portfolio website, crafted using the powerful combination of React for dynamic functionality, Bootstrap for responsive design, and Styled Components for elegant styling. Feel free to explore and get in touch!",
+    renderNote: false,
     tools: [
       <Icon key="react-icon" icon="logos:react" width="30" height="30" />,
       <Icon
@@ -81,8 +82,8 @@ export const projectsData = [
       <Icon key="netlify-icon" icon="devicon:netlify" width="30" height="30" />,
     ],
     imageUrl: portfolio,
-    codeUrl: "https://github.com/example/project1",
-    viewUrl: "https://example.com/project1",
+    codeUrl: "https://github.com/AlexJora/portfolio",
+    viewUrl: "https://portfolio-alexjora.netlify.app/",
   },
   {
     id: 2,
@@ -90,6 +91,7 @@ export const projectsData = [
     subtitle: "2. MERN stack",
     description:
       "This project is an eCommerce website with MERN stack with full featured shopping cart, product reviews and ratings, user profile with orders, admin product, user and order management, checkout process and Paypal.",
+    renderNote: false,
     tools: [
       <Icon key="react-icon" icon="logos:react" width="30" height="30" />,
       <Icon
@@ -133,7 +135,8 @@ export const projectsData = [
     title: "LAWYER WEBSITE",
     subtitle: "3. React",
     description:
-      "Multi-page React app designed to showcase and provide various legal services. The website features a contact form and WhatsApp integration to facilitate communication between the lawyer and potential clients.",
+      "Multi-page React app designed to showcase and provide various legal services, built for a Romanian client and targeting the Romanian market. The website features a contact form and WhatsApp integration to facilitate communication between the lawyer and potential clients.",
+    renderNote: false,
 
     tools: [
       <Icon key="react-icon" icon="logos:react" width="30" height="30" />,
@@ -172,7 +175,9 @@ export const projectsData = [
     title: "EDUFOCUS PROJECTS",
     subtitle: "4. PERN stack",
     description:
-      "The project is an educational website developed using the PERN stack for Edufocus Projects. It includes features such as user-friendly registration, CRUD operations, a contact form, admin training material upload, and a photo gallery.",
+      "The project is an educational website developed using the PERN stack as part of an Agile project team. It features user-friendly registration, CRUD operations, a contact form, admin training material upload, and a photo gallery. This project supports Edufocus Projects mission of empowering novice teachers in South Africa through practical training, mentoring, and coaching programs.",
+    renderNote: true,
+
     tools: [
       <Icon key="react-icon" icon="logos:react" width="30" height="30" />,
       <Icon
@@ -237,7 +242,8 @@ export const projectsData = [
     title: "TV SHOW",
     subtitle: "5. JavaScript",
     description:
-      "This is a website developed using Vanilla Javascript. Calls to TvMaze RESTful API are made so that shows and movies are displayed.",
+      "The TV Show project is a web application developed using HTML, CSS, Vanilla JavaScript, seamlessly integrating with the TVmaze API. Users can explore and choose from a diverse range of TV series and episodes, enhanced by a live search feature.This project allowed me to gain experience in manipulating the DOM, fetching data from external APIs, and designing a user-friendly interface for an enhanced viewing experience.",
+    renderNote: false,
 
     tools: [
       <Icon key="html-icon" icon="iconoir:html5" width="30" height="30" />,

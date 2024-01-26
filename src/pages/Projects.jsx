@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Image, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 // Data
 import { projectsData } from "../../data.jsx";
@@ -113,6 +113,15 @@ const Projects = () => {
                 </ProjectSubtitle>
                 <ProjectDescription className="pb-3">
                   {project.description}
+                  {project.renderNote && (
+                    <>
+                      <br />
+                      <small className="fst-italic">
+                        Note: This website may experience a brief delay as it is
+                        hosted on Render.
+                      </small>
+                    </>
+                  )}
                 </ProjectDescription>
                 <ul className="d-flex justify-content-between list-unstyled mb-4 border rounded p-3">
                   {project.tools.map((tool, index) => (

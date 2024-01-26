@@ -11,6 +11,7 @@ import { ThemeContext } from "../Theme";
 const baseStyles = css`
   color: #000;
   font-weight: normal;
+
   &:hover {
     font-weight: 900;
   }
@@ -22,7 +23,34 @@ const baseStyles = css`
 const StyledNavLinks = styled(Link)`
   ${baseStyles}
   font-size: 1.1rem;
+
+  &.active {
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+  }
 `;
+// const baseStyles = css`
+//   color: #000;
+//   font-weight: normal;
+
+//   &:hover {
+//     font-weight: 900;
+//   }
+// `;
+
+// const activeStyles = css`
+//   font-weight: 900;
+//   border-bottom: 2px solid #000;
+// `;
+
+// const StyledNavLinks = styled(NavLink)`
+//   ${baseStyles}
+//   font-size: 1.1rem;
+
+//   &.${(props) => props.activeClassName} {
+//     ${activeStyles}
+//   }
+// `;
 const StyledCustomMobileNavLinks = styled(StyledNavLinks)`
   @media (max-width: 576px) {
     font-size: 0.8rem !important;
@@ -74,7 +102,7 @@ const NavBar = ({ fixed }) => {
                 </StyledNavLinks>
               ))}
             </Nav>
-            <div className="d-flex justify-content-center align-items-center mt-5 pt-5">
+            <div className="d-flex justify-content-center align-items-center mt-4 pt-4">
               <StyledIconLink
                 href="mailto:jora.catalinaa@gmail.com"
                 theme={theme}
@@ -82,18 +110,18 @@ const NavBar = ({ fixed }) => {
                 <FontAwesomeIcon
                   icon={faSquareEnvelope}
                   size="2x"
-                  className="mx-3"
+                  className="mx-2"
                 />
               </StyledIconLink>
               <StyledIconLink href="https://github.com/AlexJora" theme={theme}>
                 <FontAwesomeIcon
                   icon={faSquareGithub}
                   size="2x"
-                  className="mx-3"
+                  className="mx-2"
                 />
               </StyledIconLink>
               <StyledIconLink href="www.linkedin.com/in/alexjora" theme={theme}>
-                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-3" />
+                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
               </StyledIconLink>
             </div>
           </Navbar>
@@ -102,9 +130,9 @@ const NavBar = ({ fixed }) => {
 
       {/* MEDIUM / SMALL SCREEN - TOP NAVBAR*/}
       <Row>
-        <Col xs={12} className="d-lg-none">
-          <Navbar className="top-navbar mt-2">
-            <Nav className="mx-auto">
+        <Col md={12} className=" d-lg-none d-md-block ">
+          <Navbar className="top-navbar mt-2 ">
+            <Nav className="mx-auto  d-flex justify-content-center w-100">
               {navLinks.map((link) => (
                 <StyledCustomMobileNavLinks
                   key={link.id}
@@ -114,7 +142,7 @@ const NavBar = ({ fixed }) => {
                   smooth={true}
                   offset={-200}
                   duration={500}
-                  className="nav-link px-4 fw-medium pt-4 custom-sm-fs"
+                  className="nav-link px-4 fw-medium pt-4"
                 >
                   {link.label}
                 </StyledCustomMobileNavLinks>
