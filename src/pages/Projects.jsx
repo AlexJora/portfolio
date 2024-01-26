@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-
-// Data
 import { projectsData } from "../../data.jsx";
 import styled from "styled-components";
+import Loader from "../components/Loader.jsx";
 
 const CodeButton = styled(Button)`
   &&&.btn {
@@ -66,6 +65,7 @@ const ProjectImage = styled.img`
   width: 100%;
 `;
 const Projects = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const projectsPerPage = 1; // Number of projects to display per page
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -78,12 +78,21 @@ const Projects = () => {
 
   const totalPages = Math.ceil(projectsData.length / projectsPerPage);
 
+  // const handlePageChange = (newPage) => {
+  //   setCurrentPage(newPage);
+  // };
+
   const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setCurrentPage(newPage);
+      setIsLoading(false);
+    }, 1000);
   };
   return (
     <>
-      <Container id="projects" className="pt-4 ps-lg-5">
+      <Container id="projects" fluid className="pt-4 ps-lg-5">
         <h6 className="display-6 pb-3">Have a look at my PROJECTS</h6>
         {currentProjects.map((project, index) => (
           <div key={index}>
@@ -95,8 +104,13 @@ const Projects = () => {
                     src={project.imageUrl}
                     alt={project.title}
                     className="rounded h-100"
-                    fluid
+                    loading="lazy"
                   />
+                  {isLoading && (
+                    <div className="pt-3 text-center">
+                      <Loader />
+                    </div>
+                  )}
                 </div>
               </Col>
 

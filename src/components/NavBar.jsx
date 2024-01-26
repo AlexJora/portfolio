@@ -29,28 +29,7 @@ const StyledNavLinks = styled(Link)`
     border-bottom: 2px solid #000;
   }
 `;
-// const baseStyles = css`
-//   color: #000;
-//   font-weight: normal;
 
-//   &:hover {
-//     font-weight: 900;
-//   }
-// `;
-
-// const activeStyles = css`
-//   font-weight: 900;
-//   border-bottom: 2px solid #000;
-// `;
-
-// const StyledNavLinks = styled(NavLink)`
-//   ${baseStyles}
-//   font-size: 1.1rem;
-
-//   &.${(props) => props.activeClassName} {
-//     ${activeStyles}
-//   }
-// `;
 const StyledCustomMobileNavLinks = styled(StyledNavLinks)`
   @media (max-width: 576px) {
     font-size: 0.8rem !important;

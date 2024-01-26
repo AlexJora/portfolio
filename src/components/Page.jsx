@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Pagination } from "react-bootstrap";
+import { Pagination } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 const Page = ({ totalPages, currentPage, onPageChange }) => {
   const pageItems = [];
@@ -29,6 +29,12 @@ const Page = ({ totalPages, currentPage, onPageChange }) => {
       />
     </Pagination>
   );
+};
+
+Page.propTypes = {
+  totalPages: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 };
 
 export default Page;

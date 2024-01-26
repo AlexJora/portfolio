@@ -7,7 +7,7 @@ const WelcomeContainer = styled.div`
 `;
 
 const WelcomeTextContainer = styled.div`
-  // font-family: "Nunito", sans-serif;
+  line-height: 2.5rem;
   font-size: 1.2rem;
 
   @media (max-width: 576px) {
@@ -28,7 +28,7 @@ const Home = () => {
             <h1 className="display-6">I'm a junior full stack developer.</h1>
           </WelcomeContainer>
           <WelcomeTextContainer className="pt-5 custom-fs">
-            <p>I have 1.5 years’ experience.</p>
+            {/* <p>I have 1.5 years’ experience.</p> */}
             <p>
               I value <span className="fw-semibold">empathy</span>, and
               <span className="fw-semibold"> integrity</span> above all else.
