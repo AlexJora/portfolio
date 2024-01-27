@@ -129,8 +129,8 @@ const Projects = () => {
                     <>
                       <br />
                       <small className="fst-italic">
-                        Note: This website may experience a brief delay as it is
-                        hosted on Render.
+                        <strong>Note:</strong> This website may experience a
+                        brief delay as it is hosted on Render.
                       </small>
                     </>
                   )}

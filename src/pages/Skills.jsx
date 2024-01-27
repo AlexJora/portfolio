@@ -18,9 +18,6 @@ export const VerticalRule = styled.div`
   opacity: 1 !important;
   width: 2px !important;
 `;
-export const Note = styled.p`
-  font-size: 0.8rem;
-`;
 
 const Skills = () => {
   return (
@@ -111,15 +108,15 @@ const Skills = () => {
       {/* ALL SCREENS */}
       {/* note */}
       <div className=" pt-5 mt-2">
-        <Note className="note">
-          <span className="fw-bold">Note:</span> This diagram is only a
-          guideline. Knowledge of all of these technologies and tools are
-          updating daily with experience.
-        </Note>
+        <small className="fst-italic">
+          <strong>Note:</strong> This diagram is only a guideline. Knowledge of
+          all of these technologies and tools are updating daily with
+          experience.
+        </small>
       </div>
 
       {/* horizontal line */}
-      <Row className="pt-2">
+      <Row className="pt-5">
         <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
           <hr className="border-2 opacity-100" />
         </div>
