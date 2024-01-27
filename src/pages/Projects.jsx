@@ -89,7 +89,7 @@ const Projects = () => {
   return (
     <>
       <Container id="projects" fluid className="pt-4 ps-lg-5">
-        <h6 className="display-6 pb-3">Have a look at my PROJECTS</h6>
+        <h6 className="display-6 pb-3 ps-md-4">Have a look at my PROJECTS</h6>
         {currentProjects.map((project, index) => (
           <div key={index}>
             <Row className="project-container pt-5">

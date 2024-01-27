@@ -11,22 +11,10 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Loader from "./components/Loader";
 
 function App() {
   const { theme } = useContext(ThemeContext);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
 
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
   return (
     <>
       <GlobalStyles />
@@ -42,11 +30,6 @@ function App() {
             md={{ span: 12 }}
             className="pt-5 mx-auto"
           >
-            {loading && (
-              <div className="text-center">
-                <Loader />
-              </div>
-            )}
             <Home />
             <About />
             <Skills />
