@@ -1,10 +1,14 @@
-// Data
+import { useEffect, useState } from "react";
 import { skillsName, divWidths } from "../../data.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
 export const SkillBackground = styled.div`
   background-color: var(--button-green);
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
+  transform: ${({ isVisible }) =>
+    isVisible ? "translateX(0)" : "translateX(-100px)"};
+  transition: opacity 2.5s ease, transform 1s ease;
 `;
 export const ScaleText = styled.div`
   font-family: "Dancing Script", cursive;
@@ -20,6 +24,25 @@ export const VerticalRule = styled.div`
 `;
 
 const Skills = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const skillsSection = document.getElementById("skills");
+      const skillsPosition = skillsSection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (skillsPosition < windowHeight * 0.75) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Container id="skills" className="pt-4 ps-lg-5">
       <h6 className="display-6 pb-5">SKILLS and tools I use and improve</h6>
@@ -56,6 +79,7 @@ const Skills = () => {
               <div className="h-20 w-25 me-2 fw-bold">{skill}</div>
 
               <SkillBackground
+                isVisible={isVisible}
                 className={` border border-2 border-light rounded h-20 w-${
                   divWidths[index] - 25
                 }`}
@@ -96,6 +120,7 @@ const Skills = () => {
             <div className="d-flex">
               <div className="h-20 w-25 me-2 fw-bold">{skill}</div>
               <SkillBackground
+                isVisible={isVisible}
                 className={`bg-skill-custom border border-2 border-light rounded h-20 w-${
                   divWidths[index] - 25
                 }`}

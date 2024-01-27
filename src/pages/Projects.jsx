@@ -66,6 +66,7 @@ const ProjectImage = styled.img`
 `;
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const projectsPerPage = 1; // Number of projects to display per page
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -86,6 +87,7 @@ const Projects = () => {
       setIsLoading(false);
     }, 1000);
   };
+
   return (
     <>
       <Container id="projects" fluid className="pt-4 ps-lg-5">
