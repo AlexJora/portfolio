@@ -45,7 +45,9 @@ const Skills = () => {
   }, []);
   return (
     <Container id="skills" className="pt-4 ps-lg-5">
-      <h6 className="display-6 pb-5">SKILLS and tools I use and improve</h6>
+      <h6 className="display-6 pb-5 text-sm-center text-lg-start">
+        SKILLS and tools I use and improve
+      </h6>
 
       {/* LARGE/MEDIUM SCREEN */}
       {/* Row 1/m-l */}

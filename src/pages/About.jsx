@@ -43,7 +43,9 @@ const About = () => {
       {/* LARGE SCREEN */}
       <Row className="mb-5 d-none d-md-flex">
         <Col>
-          <h6 className="display-6">{aboutMeTitle}</h6>
+          <h6 className="display-6 text-sm-center text-lg-start ">
+            {aboutMeTitle}
+          </h6>
         </Col>
       </Row>
 
