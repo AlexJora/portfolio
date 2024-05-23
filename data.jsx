@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import petshop from "./src/assets/projects-img/petshop.png";
 import portfolio from "./src/assets/projects-img/portfolio.png";
 import lawyer from "./src/assets/projects-img/lawyer.png";
+import lawyerNext from "./src/assets/projects-img/lawyer-next.png";
 import edufocus from "./src/assets/projects-img/edufocus.png";
 // import video from './src/assets/projects-img/video.png'
 // import hotel from './src/assets/projects-img/hotel 2.png'
@@ -39,6 +40,7 @@ export const skillsName = [
   "Bootstrap",
   "JavaScript",
   "React",
+  "Next.js",
   "Redux",
   "Node",
   "PostgreSQL",
@@ -47,7 +49,7 @@ export const skillsName = [
   "Figma",
   "GIPM",
 ];
-export const divWidths = [100, 75, 75, 50, 75, 50, 50, 50, 50, 75, 75, 50];
+export const divWidths = [100, 75, 75, 50, 75, 50, 50, 50, 50, 50, 75, 75, 50];
 /* PROJECTS
  **************************************************************
  */
@@ -168,10 +170,38 @@ export const projectsData = [
     ],
     imageUrl: lawyer,
     codeUrl: "https://github.com/AlexJora/lawyer-website",
-    viewUrl: "https://alinamarin.ro/",
+    viewUrl: "https://avocat-alinamarin.netlify.app/",
   },
   {
     id: 4,
+    title: "LAWYER WEBSITE",
+    subtitle: "4. Next.js",
+    description:
+      "Multi-page Next.js app designed to showcase and provide various legal services, built for a Romanian client and targeting the Romanian market. The website features a contact form to facilitate communication between the lawyer and potential clients.",
+    renderNote: false,
+
+    tools: [
+      <Icon icon="devicon:nextjs" key="next-icon" width="30" height="30" />,
+      <Icon
+        key="react-bootstrap-icon"
+        icon="logos:bootstrap"
+        width="30"
+        height="30"
+      />,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
+      <Icon icon="devicon:vercel" key="vercel-icon" width="30" height="30" />,
+    ],
+    imageUrl: lawyerNext,
+    codeUrl: "https://github.com/AlexJora/next-lawyer",
+    viewUrl: "www.alinamarin.ro/",
+  },
+  {
+    id: 5,
     title: "EDUFOCUS PROJECTS",
     subtitle: "4. PERN stack",
     description:
@@ -238,7 +268,7 @@ export const projectsData = [
   //   viewUrl: 'https://example.com/project1',
   // },
   {
-    id: 5,
+    id: 6,
     title: "TV SHOW",
     subtitle: "5. JavaScript",
     description:
