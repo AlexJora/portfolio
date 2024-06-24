@@ -78,6 +78,7 @@ const ContactForm = () => {
   const onSubmit = async (data) => {
     // Destructure data object
     const { name, email, message } = data;
+    console.log("Form data:", data);
     try {
       // Disable form while processing submission
       setDisabled(true);
@@ -88,10 +89,14 @@ const ContactForm = () => {
         email,
         message,
       };
+      console.log("Template params:", templateParams);
 
       const serviceId = import.meta.env.VITE_SERVICE_ID;
       const templateId = import.meta.env.VITE_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+      console.log("Service ID:", serviceId); // Log the service ID
+      console.log("Template ID:", templateId); // Log the template ID
+      console.log("Public Key:", publicKey); // Log the public key
 
       // Use emailjs to email contact form data
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
