@@ -99,7 +99,7 @@ const NavBar = ({ fixed }) => {
                   className="mx-2"
                 />
               </StyledIconLink>
-              <StyledIconLink href="www.linkedin.com/in/alexjora" theme={theme}>
+              <StyledIconLink href="https://www.linkedin.com/in/alexjora/" theme={theme}>
                 <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
               </StyledIconLink>
             </div>
