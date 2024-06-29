@@ -9,6 +9,7 @@ import edufocus from "./src/assets/projects-img/edufocus.png";
 // import hotel from './src/assets/projects-img/hotel 2.png'
 import tv from "./src/assets/projects-img/tv.png";
 import photo from "./src/assets/pages-img/photo.jpg";
+import thai from "./src/assets/projects-img/thai.png";
 /* HOME
  **************************************************************
   
@@ -55,6 +56,28 @@ export const divWidths = [100, 75, 75, 50, 75, 50, 50, 50, 50, 50, 75, 75];
 export const projectsData = [
   {
     id: 1,
+    title: "THAI MASSAGE",
+    subtitle: "1. Next.js",
+    description:
+      "This project is a Next.js-based front-end application developed for Ruan Thai, thai massage and beauty treatment center provider in Cape Town. The application spans 12 pages, offering detailed insights into diverse range of services, contact information, and more, ensuring a user-friendly experience from browsing to booking.",
+    renderNote: false,
+    tools: [
+      <Icon icon="devicon:nextjs" key="next-icon" width="30" height="30" />,
+      <Icon icon="devicon:tailwindcss" key="next-icon" width="30" height="30"/>,
+      <Icon
+        key="github-icon"
+        icon="mingcute:github-line"
+        width="30"
+        height="30"
+      />,
+      <Icon icon="devicon:vercel" key="vercel-icon" width="30" height="30" />,
+    ],
+    imageUrl: thai,
+    codeUrl: "https://github.com/AlexJora/thai-massage",
+    viewUrl: "https://www.ruanthai.co.za/",
+  },
+  {
+    id: 2,
     title: "PORTFOLIO",
     subtitle: "1. React",
     description:
@@ -87,7 +110,7 @@ export const projectsData = [
     viewUrl: "https://portfolio-alexjora.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "PET SHOP",
     subtitle: "2. MERN stack",
     description:
@@ -132,7 +155,7 @@ export const projectsData = [
     viewUrl: "https://pet-shop-o75d.onrender.com/page/1",
   },
   {
-    id: 3,
+    id: 4,
     title: "LAWYER WEBSITE",
     subtitle: "3. React",
     description:
@@ -172,7 +195,7 @@ export const projectsData = [
     viewUrl: "https://avocat-alinamarin.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "LAWYER WEBSITE",
     subtitle: "4. Next.js",
     description:
@@ -200,7 +223,7 @@ export const projectsData = [
     viewUrl: "www.alinamarin.ro/",
   },
   {
-    id: 5,
+    id: 6,
     title: "EDUFOCUS PROJECTS",
     subtitle: "4. PERN stack",
     description:
@@ -267,7 +290,7 @@ export const projectsData = [
   //   viewUrl: 'https://example.com/project1',
   // },
   {
-    id: 6,
+    id: 7,
     title: "TV SHOW",
     subtitle: "5. JavaScript",
     description:

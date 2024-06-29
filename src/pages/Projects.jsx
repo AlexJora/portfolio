@@ -66,7 +66,7 @@ const ProjectImage = styled.img`
 `;
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
   const projectsPerPage = 1; // Number of projects to display per page
   const [currentPage, setCurrentPage] = useState(1);
 
