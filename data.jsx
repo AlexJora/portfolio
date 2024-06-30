@@ -1,15 +1,15 @@
 import { Icon } from "@iconify/react";
 
-import petshop from "./src/assets/projects-img/petshop.png";
-import portfolio from "./src/assets/projects-img/portfolio.png";
-import lawyer from "./src/assets/projects-img/lawyer.png";
-import lawyerNext from "./src/assets/projects-img/lawyer-next.png";
-import edufocus from "./src/assets/projects-img/edufocus.png";
+import petshop from "./src/assets/projects-img/petshop.webp";
+import portfolio from "./src/assets/projects-img/portfolio.webp";
+import lawyer from "./src/assets/projects-img/lawyer.webp";
+import lawyerNext from "./src/assets/projects-img/lawyer-next.webp";
+import edufocus from "./src/assets/projects-img/edufocus.webp";
 // import video from './src/assets/projects-img/video.png'
 // import hotel from './src/assets/projects-img/hotel 2.png'
-import tv from "./src/assets/projects-img/tv.png";
-import photo from "./src/assets/pages-img/photo.jpg";
-import thai from "./src/assets/projects-img/thai.png";
+import tv from "./src/assets/projects-img/tv.webp";
+import photo from "./src/assets/pages-img/photo.webp";
+import thai from "./src/assets/projects-img/thai.webp";
 /* HOME
  **************************************************************
   
@@ -39,6 +39,7 @@ export const skillsName = [
   "HTML",
   "CSS",
   "Bootstrap",
+  "Tailwind",
   "JavaScript",
   "React",
   "Next.js",
@@ -49,7 +50,7 @@ export const skillsName = [
   "GitHub",
   "Figma",
 ];
-export const divWidths = [100, 75, 75, 50, 75, 50, 50, 50, 50, 50, 75, 75];
+export const divWidths = [100, 75, 75, 50, 50, 75, 50, 50, 50, 50, 50, 75, 75];
 /* PROJECTS
  **************************************************************
  */
