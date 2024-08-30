@@ -105,7 +105,7 @@ const About = () => {
               <p className="ps-lg-2">
                 <u>Experience</u>
               </p>
-              <p className="ps-lg-2">1.5 years</p>
+              <p className="ps-lg-2">2 years</p>
             </Col>
             <Col lg={4} md={4}>
               <p className="ps-lg-2">
