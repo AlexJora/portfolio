@@ -160,7 +160,7 @@ const About = () => {
                 <p>
                   <u>Experience</u>
                 </p>
-                <p>1.5 years</p>
+                <p>2 years</p>
               </Col>
             </Row>
           </Col>
