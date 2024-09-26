@@ -221,7 +221,7 @@ export const projectsData = [
     ],
     imageUrl: lawyerNext,
     codeUrl: "https://github.com/AlexJora/next-lawyer",
-    viewUrl: "www.alinamarin.ro/",
+    viewUrl: "https://next-lawyer-ten.vercel.app/",
   },
   {
     id: 6,
