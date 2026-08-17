@@ -3,45 +3,136 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { projectsData } from "../../data.jsx";
 import styled from "styled-components";
 import Loader from "../components/Loader.jsx";
+import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
+
+
+// const PrevNextButton = styled(Button)`
+//   &.btn {
+//     color: #1A2E2C;
+//     background-color: var(--button-green);
+//     border: none;
+//     border-radius: 6px;
+//     padding: 10px 20px;
+//     font-size: 0.9rem;
+//     line-height: 1.5;
+
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 4px;
+
+//     transition: background-color 0.2s ease, color 0.2s ease,
+//       transform 0.15s ease;
+
+//     &:hover {
+//       background-color: var(--button-orange);
+//       color: #1A2E2C;
+//     }
+
+//     &:active {
+//       transform: scale(0.97);
+//     }
+
+//     &:focus-visible {
+//       outline: 2px solid var(--button-orange);
+//       outline-offset: 2px;
+//       box-shadow: none;
+//     }
+//   }
+// `;
+const PrevNextButton = styled(Button)`
+  &.btn {
+    color: #fff;
+    background-color: var(--button-green);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    transition: background-color 0.2s ease, color 0.2s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background-color: var(--button-orange);
+      color: #1A2E2C;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--button-orange);
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+`;
 
 const CodeButton = styled(Button)`
   &&&.btn {
-    color: #000;
+    color: #1A2E2C;
     background-color: var(--button-orange);
-    border-color: var(--button-green);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    line-height: 1.5;
 
-    padding: 10px 15px;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      transform 0.15s ease;
 
     &:hover {
       background-color: var(--button-green);
-      border-color: var(--button-orange);
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--button-green);
+      outline-offset: 2px;
+      box-shadow: none;
     }
   }
 `;
 
 const DemoButton = styled(Button)`
-  &.btn {
-  color: #000;
-  background-color: var(--button-green);
-  border-color: var(--button-orange);
-  padding: 10px 15px;
+  &&&.btn {
+    color: #fff;
+    background-color: var(--button-green);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 
-  &:hover {
-    background-color: var(--button-orange);
-    border-color: var(--button-green);
+    transition: background-color 0.2s ease, color 0.2s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background-color: var(--button-orange);
+      color: #1A2E2C;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--button-orange);
+      outline-offset: 2px;
+      box-shadow: none;
+    }
   }
 `;
-const PrevNextButton = styled(Button)`
-  &.btn {
-  color: #000;
-  background-color: var(--button-green);
-  border-color: var(--button-orange);
-  padding: 10px 15px;
-  &:hover {
-    background-color: var(--button-orange);
-    border-color: var(--button-green);
-  }
-`;
+
 const ProjectDescription = styled.p`
   font-size: 1.1rem;
   line-height: 1.8rem;
@@ -91,7 +182,7 @@ const Projects = () => {
   return (
     <>
       <Container id="projects" fluid className="pt-4 ps-lg-5">
-        <h6 className="display-6 pb-3 text-sm-center text-lg-start ">
+        <h6 className="title pb-3 text-sm-center text-lg-start ">
           Have a look at my PROJECTS
         </h6>
         {currentProjects.map((project, index) => (
@@ -171,26 +262,29 @@ const Projects = () => {
         <Row className="pt-5">
           <Col xs={12} lg={8} className="offset-lg-1">
             <Col className="text-center">
-              <PrevNextButton
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="me-2 btn"
-              >
-                PREVIOUS Project
-              </PrevNextButton>
-              <PrevNextButton
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="btn"
-              >
-                NEXT Project
-              </PrevNextButton>
+              
+               <PrevNextButton
+  onClick={() => handlePageChange(currentPage - 1)}
+  disabled={currentPage === 1}
+  className="me-2 btn"
+>
+  <BsArrowLeftShort size={20} />
+  PREVIOUS Project
+</PrevNextButton>
+<PrevNextButton
+  onClick={() => handlePageChange(currentPage + 1)}
+  disabled={currentPage === totalPages}
+  className="btn"
+>
+  NEXT Project
+  <BsArrowRightShort size={20} />
+</PrevNextButton>
             </Col>
           </Col>
         </Row>
         <Row className="pt-5 mt-lg-4">
           <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
-            <hr className="border-2 opacity-100" />
+            <hr className="border-1 opacity-10" style={{ color: '#1A2E2C' }} />
           </div>
         </Row>
       </Container>

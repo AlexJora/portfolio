@@ -45,7 +45,7 @@ const Skills = () => {
   }, []);
   return (
     <Container id="skills" className="pt-4 ps-lg-5">
-      <h6 className="display-6 pb-5 text-sm-center text-lg-start">
+      <h6 className="title pb-5 text-sm-center text-lg-start">
         SKILLS and tools I use and improve
       </h6>
 
@@ -145,7 +145,7 @@ const Skills = () => {
       {/* horizontal line */}
       <Row className="pt-5">
         <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
-          <hr className="border-2 opacity-100" />
+          <hr className="border-1 opacity-10" style={{ color: '#1A2E2C' }} />
         </div>
       </Row>
     </Container>

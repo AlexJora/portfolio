@@ -1,3 +1,4 @@
+
 import { useContext } from "react";
 import { ThemeContext } from "../Theme";
 import { Container, Row, Col, Image } from "react-bootstrap";
@@ -8,18 +9,23 @@ const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <Container fluid>
-      <Row className="d-flex justify-content-between">
-        <Col>
+      <Row className="d-flex justify-content-between align-items-center">
+        <Col className="d-flex align-items-center">
           {/*logo image */}
-          <Image
-            src={logo}
-            alt="Logo"
-            className="pt-3 ps-sm-2 ps-md-2 ps-lg-5"
+          <div
+            className="ms-sm-2 ms-md-2 ms-lg-5"
+            style={{
+              width: "100px",
+              height: "40px",
+              backgroundColor: theme === "light-theme" ? "#1A2E2C" : "#FFFFFF",
+              WebkitMask: `url(${logo}) no-repeat center / contain`,
+              mask: `url(${logo}) no-repeat center / contain`,
+            }}
           />
         </Col>
 
         {/* Light/Dark mode buttons */}
-        <Col className="d-flex justify-content-end pt-3">
+        <Col className="d-flex justify-content-end align-items-center">
           <Icon
             icon={
               theme === "light-theme"

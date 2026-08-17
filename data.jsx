@@ -8,7 +8,7 @@ import edufocus from "./src/assets/projects-img/edufocus.webp";
 // import video from './src/assets/projects-img/video.png'
 // import hotel from './src/assets/projects-img/hotel 2.png'
 import tv from "./src/assets/projects-img/tv.webp";
-import photo from "./src/assets/pages-img/photo.webp";
+import photo from "./src/assets/pages-img/photo2.png";
 import thai from "./src/assets/projects-img/thai.webp";
 /* HOME
  **************************************************************
@@ -23,13 +23,10 @@ export const aboutImage = {
 export const aboutMeTitle = "Some info ABOUT me";
 
 export const aboutMeText = `
-  I’m a curious software engineer based in Cape Town, South Africa.
-  I love creating beautiful and user-friendly products. I'm also a data enthusiast, always eager to learn new things.
-
-  I've completed an intensive 9-month course at CodeYourFuture, which has provided me with a solid foundation in Full Stack Development.
-
-   With a background in catering and nursing, I bring a unique perspective and creative problem-solving to the table.
-    Join me on this journey, and let's build something amazing together!
+  I’m a Romanian web developer based in Cape Town, South Africa, with agency experience in web development.
+  With a Full Stack foundation from an intensive bootcamp, I enjoy building clean, user-friendly websites and combining development with design.
+  Working with real clients has taught me the importance of understanding their needs, solving problems, and delivering work that meets their goals.
+  I’m always learning, creating, and looking for new ways to grow.
 `;
 
 /* SKILLS
@@ -38,19 +35,20 @@ export const aboutMeText = `
 export const skillsName = [
   "HTML",
   "CSS",
-  "Bootstrap",
-  "Tailwind",
   "JavaScript",
   "React",
   "Next.js",
   "Redux",
-  "Node",
+  "Express.js",
   "PostgreSQL",
   "MongoDB",
   "GitHub",
   "Figma",
+  "WordPress",
+  "Webflow",
+  "SvelteKit",
 ];
-export const divWidths = [100, 75, 75, 50, 50, 75, 50, 50, 50, 50, 50, 75, 75];
+export const divWidths = [100, 75, 50, 50, 50, 50, 50, 50, 50, 75, 50, 50, 50, 50];
 /* PROJECTS
  **************************************************************
  */

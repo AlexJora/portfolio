@@ -2,31 +2,47 @@ import { useContext } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import { ThemeContext } from "../Theme";
 
+// const baseStyles = css`
+//   color: #1A2E2C;
+//   font-weight: normal;
+
+//   &:hover {
+//     font-weight: 600;
+//   }
+//   &.active {
+//     font-weight: 600;
+    
+//   }
+// `;
+
 const baseStyles = css`
-  color: #000;
-  font-weight: normal;
+  color: #1A2E2C;
+  font-weight: bold;
 
   &:hover {
-    font-weight: 900;
+    color: #3e625e;
   }
   &.active {
-    font-weight: 900;
-    border-bottom: 2px solid #000;
+    
+    color: #3e625e;
+    --bs-navbar-active-color: #3e625e;
   }
 `;
 const StyledNavLinks = styled(Link)`
   ${baseStyles}
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 
   &.active {
-    font-weight: 900;
-    border-bottom: 2px solid #000;
+    font-weight: 600;
+    
   }
 `;
 
@@ -38,7 +54,7 @@ const StyledCustomMobileNavLinks = styled(StyledNavLinks)`
   }
 `;
 const StyledIconLink = styled.a`
-  color: ${(props) => (props.theme === "dark-theme" ? "white" : "black")};
+  color: ${(props) => (props.theme === "dark-theme" ? "white" : "#1A2E2C")};
   &:hover {
     color: ${(props) =>
       props.theme === "dark-theme" ? "lightgray" : "darkgray"};
@@ -65,7 +81,7 @@ const NavBar = ({ fixed }) => {
           }`}
         >
           <Navbar className="mt-5 flex-column pt-5">
-            <Nav className="flex-column pe-2 pb-5">
+            <Nav className="flex-column pe-2">
               {navLinks.map((link) => (
                 <StyledNavLinks
                   key={link.id}
@@ -81,26 +97,18 @@ const NavBar = ({ fixed }) => {
                 </StyledNavLinks>
               ))}
             </Nav>
-            <div className="d-flex justify-content-center align-items-center mt-4 pt-4">
+            <div className="d-flex justify-content-center align-items-center">
               <StyledIconLink
                 href="mailto:jora.catalinaa@gmail.com"
                 theme={theme}
               >
-                <FontAwesomeIcon
-                  icon={faSquareEnvelope}
-                  size="2x"
-                  className="mx-2"
-                />
+                <MdEmail size={20} className="mx-2" />
               </StyledIconLink>
               <StyledIconLink href="https://github.com/AlexJora" theme={theme}>
-                <FontAwesomeIcon
-                  icon={faSquareGithub}
-                  size="2x"
-                  className="mx-2"
-                />
+                <FaGithub size={20} className="mx-2" />
               </StyledIconLink>
               <StyledIconLink href="https://www.linkedin.com/in/alexjora/" theme={theme}>
-                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
+                <FaLinkedinIn size={20} className="mx-2" />
               </StyledIconLink>
             </div>
           </Navbar>
@@ -121,7 +129,7 @@ const NavBar = ({ fixed }) => {
                   smooth={true}
                   offset={-200}
                   duration={500}
-                  className="nav-link px-4 fw-medium pt-4"
+                  className="nav-link px-4 pt-4"
                 >
                   {link.label}
                 </StyledCustomMobileNavLinks>

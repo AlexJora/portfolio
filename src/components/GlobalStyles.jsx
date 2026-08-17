@@ -3,21 +3,31 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --text-primary-light: #000;
+    --text-primary-light: #1A2E2C;
     --text-primary-dark: rgb(243, 239, 239);
-    --bg-primary-dark: #000;
-    --bg-primary-light: linear-gradient(     
-132deg, 
-rgba(37,85,83,1) 4%,
-rgba(234,99,78,1) 12%, 
-rgba(64,166,157,1) 20%, 
-rgba(240,249,249,1) 40%, 
-rgba(240,249,249,1) 76%, 
-rgba(64,166,157,1) 85%, 
-rgba(234,99,78,1) 90%, 
-rgba(37,85,83,1) 99%);
+    --bg-primary-dark: #282828;
+//     --bg-primary-light: linear-gradient(     
+// 132deg, 
+// rgba(37,85,83,1) 4%,
+// rgba(234,99,78,1) 12%, 
+// rgba(64,166,157,1) 20%, 
+// rgba(240,249,249,1) 40%, 
+// rgba(240,249,249,1) 76%, 
+// rgba(64,166,157,1) 85%, 
+// rgba(234,99,78,1) 90%, 
+// rgba(37,85,83,1) 99%);
+--bg-primary-light: linear-gradient(
+  132deg,
+  rgba(234,99,78,1) 0%,
+  rgba(64,166,157,1) 20%,
+  rgba(240,249,249,1) 42%,
+  rgba(240,249,249,1) 78%,
+  rgba(64,166,157,1) 90%,
+  rgba(234,99,78,1) 100%
+);
 --button-green: rgba(64, 166, 157, 1);
 --button-orange: rgba(234, 99, 78, 1); 
+// --button-orange: rgb(216, 75, 53); 
     
   }
 
@@ -60,7 +70,9 @@ rgba(37,85,83,1) 99%);
         font-family: 'Nunito', sans-serif;
         
       }
-      
+      .title {
+        font-size: 2rem;
+}
       .dark-theme .navbar-nav .nav-link {
         color: white;
       }    
@@ -72,7 +84,7 @@ rgba(37,85,83,1) 99%);
         
       }
       .light-theme .hr-wrapper {
-        color:  #000; 
+        color:  #1A2E2C; 
       }
     
       .dark-theme .hr-wrapper {

@@ -3,17 +3,35 @@ import { aboutMeTitle, aboutMeText, aboutImage } from "../../data.jsx";
 import resume from "../assets/pages-img/Resume.pdf";
 import styled from "styled-components";
 
+
+
+
 const ResumeButton = styled(Button)`
   &.btn {
-    color: #000;
+    color: #1A2E2C;
     background-color: var(--button-orange);
-    border-color: var(--button-green);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    line-height: 1.5;
 
-    padding: 10px 15px;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      transform 0.15s ease;
 
     &:hover {
       background-color: var(--button-green);
-      border-color: var(--button-orange);
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--button-green);
+      outline-offset: 2px;
+      box-shadow: none;
     }
   }
 `;
@@ -43,7 +61,7 @@ const About = () => {
       {/* LARGE SCREEN */}
       <Row className="mb-5 d-none d-md-flex">
         <Col>
-          <h6 className="display-6 text-sm-center text-lg-start ">
+          <h6 className="title text-sm-center text-lg-start ">
             {aboutMeTitle}
           </h6>
         </Col>
@@ -51,11 +69,11 @@ const About = () => {
 
       <Row className="mb-5 d-none d-lg-flex">
         <Col lg={6} className="pe-1">
-          <AboutText className=" pb-5">{aboutMeText}</AboutText>
+          <AboutText className=" pb-2">{aboutMeText}</AboutText>
 
           <a href={resume} target="_blank" rel="noreferrer">
             <ResumeButton size="md" className="mt-1 btn">
-              MY RESUME
+              My Resume
             </ResumeButton>
           </a>
         </Col>
@@ -85,13 +103,13 @@ const About = () => {
           <AboutText>{aboutMeText}</AboutText>
           <a href={resume} target="_blank" rel="noreferrer">
             <ResumeButton size="md" className="mt-5 btn">
-              MY RESUME
+              My Resume
             </ResumeButton>
           </a>
         </Col>
       </Row>
       {/* ============ */}
-      <Row className="pt-1 d-none d-lg-flex d-md-flex">
+      {/* <Row className="pt-1 d-none d-lg-flex d-md-flex">
         <Col className="mb-4">
           <Row>
             <Col lg={4} md={4} className="border-end border-start border-dark">
@@ -116,7 +134,7 @@ const About = () => {
             </Col>
           </Row>
         </Col>
-      </Row>
+      </Row> */}
       {/* ============================================== */}
       {/* SMALL SCREEN */}
       <Container>
@@ -139,7 +157,7 @@ const About = () => {
 
             <Col sm={12}>
               <ResumeButton size="md" className=" mb-5 btn">
-                MY RESUME
+                My Resume
               </ResumeButton>
             </Col>
           </Col>
@@ -179,7 +197,7 @@ const About = () => {
 
         <Row className="pt-lg-5 pt-md-5 pt-sm-1">
           <div className="col-12 col-md-12 col-lg-10 hr-wrapper">
-            <hr className="border-2 opacity-100" />
+            <hr className="border-1 opacity-10" style={{ color: '#1A2E2C' }} />
           </div>
         </Row>
       </Container>

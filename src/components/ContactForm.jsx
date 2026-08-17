@@ -10,8 +10,8 @@ const lightThemeStyles = css`
   background-color: transparent;
   border-top: none;
   border-right: none;
-  border-left: 3px solid #000;
-  border-bottom: 3px solid #000;
+  border-left: 3px solid #1A2E2C;
+  border-bottom: 3px solid #1A2E2C;
 `;
 
 const darkThemeStyles = css`
@@ -31,20 +31,35 @@ const CustomInput = styled.input`
   margin-bottom: 10px;
 
   &::placeholder {
-    color: ${(props) => (props.theme === "light-theme" ? "black" : "white")};
+    color: ${(props) => (props.theme === "light-theme" ? "#1A2E2C" : "white")};
 `;
 
 const SubmitButton = styled(Button)`
   &&&.btn {
-    color: #000;
+    color: #1A2E2C;
     background-color: var(--button-orange);
-    border-color: var(--button-green);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    line-height: 1.5;
 
-    padding: 10px 15px;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      transform 0.15s ease;
 
     &:hover {
       background-color: var(--button-green);
-      border-color: var(--button-orange);
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--button-green);
+      outline-offset: 2px;
+      box-shadow: none;
     }
   }
 `;
@@ -170,7 +185,7 @@ const ContactForm = () => {
       </Form.Group>
 
       <SubmitButton className="btn" type="submit" disabled={disabled}>
-        GET IN TOUCH
+        Submit
       </SubmitButton>
 
       {alertInfo.display && (

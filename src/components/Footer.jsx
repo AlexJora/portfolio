@@ -11,7 +11,7 @@ const StyledFooter = styled.div`
 const Footer = () => {
   return (
     <StyledFooter className="pt-2 w-100">
-      💖 ©2024 Catalina-Alexandra Jora
+      💖 ©2026 Catalina-Alexandra Jora
     </StyledFooter>
   );
 };
